@@ -1,0 +1,11 @@
+-RTC
+-Ura z GSM omrežja // +CNTP  //FIXME
+
+
+2. EventManager: Events -> EventHandlers
+
+
+-Iz class Simcom premakni metode print_P, print_EE v class mySoftwareSerial
+
+Reset GSM module ()
+Reboot node - SMS

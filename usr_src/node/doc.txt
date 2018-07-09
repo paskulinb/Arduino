@@ -1,0 +1,27 @@
+Commands:
+
+RELx ON
+RELx OFF
+RELx HEATy tt (e.g. "REL1 HEAT1 22" -> relay1 controls some heater according to temp_sensor1. Target temperature is 22°C.)
+RELx COOLy tt (e.g. "REL2 COOL3 24" -> relay2 controls some cooler according to temp_sensor3. Target temperature is 24°C.)
+RELx PULSE (timestamp - start is saved in RAM)
+RELx REG2LVL lvl_on lvl_off
+
+in case of only one (first) relay, "REL1" may be omitted:
+ON
+OFF
+HEAT tt  (same as REL1 HEAT1 tt)
+COOL tt
+PULSE (timestamp - start is saved in RAM)
+REG2LVL lvl_on lvl_off
+
+- commands NOT case sensitive
+
+
+
+--- EEPROM saving -------------------------
+EEPROM[0] : REL1 {fncode, arg1, arg2}
+EEPROM[3] : REL2 {fncode, arg1, arg2}
+EEPROM[6] : REL3 {fncode, arg1, arg2}
+EEPROM[9] : REL4 {fncode, arg1, arg2}
+...  
